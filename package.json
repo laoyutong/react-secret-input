@@ -1,0 +1,24 @@
+{
+  "name": "inputpassword",
+  "version": "1.0.0",
+  "description": "An input of type password implemented with React and TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laoyutong/InputPassword.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laoyutong/InputPassword/issues"
+  },
+  "homepage": "https://github.com/laoyutong/InputPassword#readme",
+  "devDependencies": {
+    "@types/react": "^17.0.34",
+    "react": "^17.0.2",
+    "typescript": "^4.4.4"
+  }
+}

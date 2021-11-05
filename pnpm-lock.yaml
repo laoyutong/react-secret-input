@@ -1,0 +1,81 @@
+lockfileVersion: 5.3
+
+specifiers:
+  '@types/react': ^17.0.34
+  react: ^17.0.2
+  typescript: ^4.4.4
+
+devDependencies:
+  '@types/react': registry.npmmirror.com/@types/react/17.0.34
+  react: registry.npmmirror.com/react/17.0.2
+  typescript: registry.npmmirror.com/typescript/4.4.4
+
+packages:
+
+  registry.nlark.com/@types/prop-types/15.7.4:
+    resolution: {integrity: sha1-/PcgXCXf95Xuea8eMNosl5CAjxE=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/@types/prop-types/download/@types/prop-types-15.7.4.tgz}
+    name: '@types/prop-types'
+    version: 15.7.4
+    dev: true
+
+  registry.nlark.com/@types/scheduler/0.16.2:
+    resolution: {integrity: sha1-GmL4lSVyPd4kuhsBsJK/XfitTTk=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/@types/scheduler/download/@types/scheduler-0.16.2.tgz}
+    name: '@types/scheduler'
+    version: 0.16.2
+    dev: true
+
+  registry.nlark.com/csstype/3.0.9:
+    resolution: {integrity: sha1-ZBCvMbJr0FIJM9AsvGT86c4/vws=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/csstype/download/csstype-3.0.9.tgz}
+    name: csstype
+    version: 3.0.9
+    dev: true
+
+  registry.nlark.com/js-tokens/4.0.0:
+    resolution: {integrity: sha1-GSA/tZmR35jjoocFDUZHzerzJJk=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/js-tokens/download/js-tokens-4.0.0.tgz}
+    name: js-tokens
+    version: 4.0.0
+    dev: true
+
+  registry.nlark.com/loose-envify/1.4.0:
+    resolution: {integrity: sha1-ce5R+nvkyuwaY4OffmgtgTLTDK8=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/loose-envify/download/loose-envify-1.4.0.tgz?cache=0&sync_timestamp=1631518078972&other_urls=https%3A%2F%2Fregistry.nlark.com%2Floose-envify%2Fdownload%2Floose-envify-1.4.0.tgz}
+    name: loose-envify
+    version: 1.4.0
+    hasBin: true
+    dependencies:
+      js-tokens: registry.nlark.com/js-tokens/4.0.0
+    dev: true
+
+  registry.nlark.com/object-assign/4.1.1:
+    resolution: {integrity: sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/object-assign/download/object-assign-4.1.1.tgz}
+    name: object-assign
+    version: 4.1.1
+    engines: {node: '>=0.10.0'}
+    dev: true
+
+  registry.npmmirror.com/@types/react/17.0.34:
+    resolution: {integrity: sha1-eXtm01m2kuPxmZG2sH5LDHBsAQI=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/react/download/@types/react-17.0.34.tgz}
+    name: '@types/react'
+    version: 17.0.34
+    dependencies:
+      '@types/prop-types': registry.nlark.com/@types/prop-types/15.7.4
+      '@types/scheduler': registry.nlark.com/@types/scheduler/0.16.2
+      csstype: registry.nlark.com/csstype/3.0.9
+    dev: true
+
+  registry.npmmirror.com/react/17.0.2:
+    resolution: {integrity: sha1-0LXMUW0p6z7uOD91tihkz7aAADc=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react/download/react-17.0.2.tgz}
+    name: react
+    version: 17.0.2
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      loose-envify: registry.nlark.com/loose-envify/1.4.0
+      object-assign: registry.nlark.com/object-assign/4.1.1
+    dev: true
+
+  registry.npmmirror.com/typescript/4.4.4:
+    resolution: {integrity: sha1-LNAaGh8WBwTTEB/VpY/w+fy4Aww=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/typescript/download/typescript-4.4.4.tgz}
+    name: typescript
+    version: 4.4.4
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: true
