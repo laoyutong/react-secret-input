@@ -1,6 +1,6 @@
 {
   "name": "react-secret-input",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An input of type password implemented with React and TypeScript",
   "main": "index.js",
   "module": "./dist/index.esm.js",
@@ -28,6 +28,6 @@
     "typescript": "^4.4.4"
   },
   "peerDependencies": {
-    "react": "^17.0.|^16.8."
+    "react": "^16.12.0 || ^17.0.0"
   }
 }
