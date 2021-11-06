@@ -14,7 +14,8 @@ interface IPProps {
   passwordSymbol?: string;
 }
 
-export type InputPasswordProps = IPProps & InputHTMLAttributes<HTMLElement>;
+export type InputPasswordProps = IPProps &
+  Omit<InputHTMLAttributes<HTMLElement>, "onChange" | "value">;
 
 const PASSWORD_SYMBOL = "•";
 
