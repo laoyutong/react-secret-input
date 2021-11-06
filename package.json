@@ -1,6 +1,6 @@
 {
   "name": "react-secret-input",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An input of type password implemented with React and TypeScript",
   "main": "index.js",
   "module": "./dist/index.esm.js",
