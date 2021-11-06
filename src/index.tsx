@@ -1,27 +1,35 @@
-import { ChangeEvent, useEffect, useRef, useState } from "react";
+import React, {
+  ChangeEvent,
+  InputHTMLAttributes,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
-interface SelectionData {
-  start: number;
-  end: number;
+type SelectionData = Record<"start" | "end", number>;
+
+interface IPProps {
+  onChange?: (v: string) => void;
+  value?: string;
+  passwordSymbol?: string;
 }
 
-export interface InputPasswordProps {
-  onChange: (v: string) => void;
-  value: string;
-}
+export type InputPasswordProps = IPProps & InputHTMLAttributes<HTMLElement>;
 
-const SECRET_SYMBOL = "•";
+const PASSWORD_SYMBOL = "•";
 
 const InputPassword = ({
   onChange,
-  value,
+  value = "",
+  passwordSymbol = PASSWORD_SYMBOL,
+  ...props
 }: InputPasswordProps): JSX.Element => {
   const inputIns = useRef<HTMLInputElement>(null);
   const selectionData = useRef<SelectionData>({} as SelectionData);
-  const timer = useRef<number>();
+  const timer = useRef<ReturnType<typeof setTimeout>>();
 
   const [displayedValue, setDisplayValue] = useState<string>(
-    SECRET_SYMBOL.repeat(value.length)
+    passwordSymbol.repeat(value.length)
   );
   const actualValue = useRef<string>(value);
 
@@ -43,7 +51,7 @@ const InputPassword = ({
       actualValue.current =
         actualValue.current.substring(0, s) +
         actualValue.current.substring(s + 1, actualValue.current.length);
-      setDisplayValue(SECRET_SYMBOL.repeat(newLength));
+      setDisplayValue(passwordSymbol.repeat(newLength));
       finalSelectPosition = s;
     } else {
       const newStr = v.substring(start, end + newLength - oldLength);
@@ -55,10 +63,10 @@ const InputPassword = ({
           actualValue.current.substring(end, actualValue.current.length);
         setDisplayValue(
           newStr.length === 1
-            ? SECRET_SYMBOL.repeat(start) +
+            ? passwordSymbol.repeat(start) +
                 newStr +
-                SECRET_SYMBOL.repeat(newLength - start - 1)
-            : SECRET_SYMBOL.repeat(newLength)
+                passwordSymbol.repeat(newLength - start - 1)
+            : passwordSymbol.repeat(newLength)
         );
         finalSelectPosition = start + newStr.length;
       } else {
@@ -66,7 +74,7 @@ const InputPassword = ({
         actualValue.current =
           actualValue.current.substring(0, start) +
           actualValue.current.substring(end, actualValue.current.length);
-        setDisplayValue(SECRET_SYMBOL.repeat(newLength));
+        setDisplayValue(passwordSymbol.repeat(newLength));
         finalSelectPosition = start;
       }
     }
@@ -83,14 +91,14 @@ const InputPassword = ({
     });
 
     timer.current = setTimeout(() => {
-      setDisplayValue(SECRET_SYMBOL.repeat(newLength));
+      setDisplayValue(passwordSymbol.repeat(newLength));
       if (inputIns.current) {
         inputIns.current.selectionStart = selectionData.current.start;
         inputIns.current.selectionEnd = selectionData.current.end;
       }
     }, 1000);
 
-    onChange(actualValue.current);
+    onChange?.(actualValue.current);
   };
 
   useEffect(() => {
@@ -127,7 +135,12 @@ const InputPassword = ({
   }, []);
 
   return (
-    <input ref={inputIns} onChange={handledChange} value={displayedValue} />
+    <input
+      ref={inputIns}
+      onChange={handledChange}
+      value={displayedValue}
+      {...props}
+    />
   );
 };
 
