@@ -1,6 +1,6 @@
 {
   "name": "react-secret-input",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An input of type password implemented with React and TypeScript",
   "main": "index.js",
   "module": "./dist/index.esm.js",
@@ -10,14 +10,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/laoyutong/InputPassword.git"
+    "url": "git+https://github.com/laoyutong/react-secret-input.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/laoyutong/InputPassword/issues"
+    "url": "https://github.com/laoyutong/react-secret-input/issues"
   },
-  "homepage": "https://github.com/laoyutong/InputPassword#readme",
+  "homepage": "https://github.com/laoyutong/react-secret-input#readme",
+  "keywords": [
+    "React",
+    "input",
+    "TypeScript",
+    "password"
+  ],
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.3.0",
     "@types/react": "^17.0.34",
